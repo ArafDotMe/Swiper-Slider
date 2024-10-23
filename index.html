@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.css" integrity="sha512-pmAAV1X4Nh5jA9m+jcvwJXFQvCBi3T17aZ1KWkqXr7g/O2YMvO8rfaa5ETWDuBvRq6fbDjlw4jHL44jNTScaKg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+<style>
+.banner-item {
+  height: 700px;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media only screen and (min-width: 1200px) and (max-width: 1599px), only screen and (min-width: 992px) and (max-width: 1199px) {
+  .banner-item {
+    height: 600px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .banner-item {
+    height: 500px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .banner-item {
+    height: 450px;
+  }
+}
+@media only screen and (max-width: 575px) {
+  .banner-item {
+    height: 400px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px), only screen and (max-width: 767px) {
+  .banner-item.desktop {
+    display: none;
+  }
+}
+.banner-item.mobile {
+  display: none;
+}
+@media only screen and (min-width: 768px) and (max-width: 991px), only screen and (max-width: 767px) {
+  .banner-item.mobile {
+    display: flex;
+  }
+}
+
+.banner-wrapper {
+  display: flex;
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 14px 15px;
+  align-items: center;
+}
+@media only screen and (max-width: 767px) {
+  .banner-wrapper {
+    padding: 10px;
+    bottom: 15px;
+  }
+}
+.banner-wrapper .button-next, .banner-wrapper .button-prev {
+  line-height: 0;
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.3);
+  transition: all 0.3s linear;
+  cursor: pointer;
+}
+.banner-wrapper .button-next svg, .banner-wrapper .button-prev svg {
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+}
+.banner-wrapper .button-next:hover, .banner-wrapper .button-prev:hover {
+  color: #000;
+}
+.banner-wrapper .button-next {
+  margin-left: 8px;
+}
+.banner-wrapper .button-prev {
+  margin-right: 8px;
+}
+.banner-wrapper .pagination {
+  display: flex;
+}
+.banner-wrapper .pagination .swiper-pagination-bullet {
+  width: 14px;
+  height: 14px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  margin: 0;
+  opacity: 1;
+  background: none;
+  margin: 0 4px;
+  transition: all 0.3s linear;
+}
+@media only screen and (max-width: 767px) {
+  .banner-wrapper .pagination .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+  }
+}
+.banner-wrapper .pagination .swiper-pagination-bullet-active {
+  background-color: #000;
+}
+</style>
+
+    <!-- Banner Start -->
+    <div class="banner-section banner-active">
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="banner-item desktop" style="
+                                background-image: url(https://img.freepik.com/free-photo/beautiful-natural-view-landscape_23-2150787996.jpg);
+                            "></div>
+                    <div class="banner-item mobile" style="
+                                background-image: url(https://png.pngtree.com/thumb_back/fw800/background/20240414/pngtree-nature-landscape-of-mountains-image_15715207.jpg);
+                            "></div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="banner-item desktop" style="
+                                background-image: url(https://img.freepik.com/free-photo/beautiful-natural-view-landscape_23-2150787996.jpg);
+                            "></div>
+                    <div class="banner-item mobile" style="
+                                background-image: url(https://png.pngtree.com/thumb_back/fw800/background/20240414/pngtree-nature-landscape-of-mountains-image_15715207.jpg);
+                            "></div>
+                </div>
+            </div>
+            <div class="banner-wrapper">
+                <div class="button-prev">
+                    <svg viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5.8713 8.24773L9.8943 4.22472L8.83365 3.16406L3 8.99773L8.83365 14.8313L9.8943 13.7707L5.8713 9.74773H15V8.24773H5.8713Z" />
+                    </svg>
+                </div>
+                <div class="pagination"></div>
+                <div class="button-next">
+                    <svg viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12.1287 8.24773L8.1057 4.22472L9.16635 3.16406L15 8.99773L9.16635 14.8313L8.1057 13.7707L12.1287 9.74773H3V8.24773H12.1287Z" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Banner End -->
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js" integrity="sha512-Ysw1DcK1P+uYLqprEAzNQJP+J4hTx4t/3X2nbVwszao8wD+9afLjBQYjz7Uk4ADP+Er++mJoScI42ueGtQOzEA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+    const banner = new Swiper(".banner-active .swiper", {
+    navigation: {
+        nextEl: ".banner-active .button-next",
+        prevEl: ".banner-active .button-prev",
+    },
+    pagination: {
+        el: ".banner-active .pagination",
+        clickable: true,
+    },
+});
+</script>
+</body>
+</html>
